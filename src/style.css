@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   /* stylelint-disable-next-line csstree/validator */
   height: fit-content;
   min-width: 50%;

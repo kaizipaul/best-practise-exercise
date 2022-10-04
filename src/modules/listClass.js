@@ -24,12 +24,13 @@ export default class Todolist {
         Todolist.deleteItem(i);
       });
     });
-    for (let i = 0; i < ellipsis.length; i += 1) {
-      ellipsis[i].addEventListener('click', () => {
-        removeItem[i].style.display = 'inline';
-        ellipsis[i].style.display = 'none';
-      });
-    }
+
+    ellipsis.forEach((dotted) => {
+      dotted.addEventListener('click', () => {
+        removeItem.style.display = 'inline';
+        dotted.style.display = 'none';
+      })
+    });
 
     checkedBox.forEach((check, index) => {
       check.addEventListener('change', () => {
@@ -41,7 +42,7 @@ export default class Todolist {
         localStorage.setItem('listStorage', JSON.stringify(list));
       });
     });
-  };
+  }
 
   static edit = () => {
     const todo = document.querySelectorAll('.to-do');
