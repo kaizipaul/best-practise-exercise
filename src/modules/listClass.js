@@ -29,7 +29,7 @@ export default class Todolist {
       dotted.addEventListener('click', () => {
         removeItem.style.display = 'inline';
         dotted.style.display = 'none';
-      })
+      });
     });
 
     checkedBox.forEach((check, index) => {
