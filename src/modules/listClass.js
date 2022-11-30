@@ -25,12 +25,12 @@ export default class Todolist {
       });
     });
 
-    ellipsis.forEach((dotted) => {
-      dotted.addEventListener('click', () => {
-        removeItem.style.display = 'inline';
-        dotted.style.display = 'none';
+    for (let i = 0; i < ellipsis.length; i += 1) {
+      ellipsis[i].addEventListener('click', () => {
+        removeItem[i].style.display = 'inline';
+        ellipsis[i].style.display = 'none';
       });
-    });
+    }
 
     checkedBox.forEach((check, index) => {
       check.addEventListener('change', () => {
